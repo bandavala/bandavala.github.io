@@ -1,4 +1,4 @@
 bandavala.github.io
 ===================
 
-investment notes and personal finance calculators
+Investment notes and personal finance calculators

@@ -1,20 +1,25 @@
 ---
-layout: default
+layout: bsDefault
 ---
 
-<div class="home">
-
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
+<div class = "row">
+  <div class="col-sm-8 blog-main">
+    {% for post in paginator.posts %}
+    <div class="blog-post">
+      <a href= "{{post.url}}"><h2 class="blog-post-title">{{ post.title }}</h2></a>
+      <p class="blog-post-meta">{{ page.date | date: '%B %d, %Y' }}</p>
+      {{ post.content }}
+    </div>
     {% endfor %}
-  </ul>
+    <ul class="pager">
+      {% if paginator.previous_page %}
+      <li><a href="/page{{ paginator.previous_page }}">Previous</a><li>
+        {% endif %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+        {% if paginator.next_page %}
+      <li>Next<li>
+        {% endif %}
+    </ul>
+  </div>
+  {% include bsSideBar.html %}
 </div>
