@@ -2,8 +2,7 @@
 title: Bandavala
 email: chandviki@outlook.com
 description: "Collection of personal finance calculators and investment notes"
-baseurl: ""
-url: "http://yourdomain.com"
+url: "http://bandavala.github.io/"
 paginate: 10
 
 # Build settings
