@@ -1,10 +1,15 @@
 ---
 layout: bsDefault
 ---
-<div class="blog-post">
-  <h2 class="blog-post-title">{{ page.title }}</h2>
-  <p class="blog-post-meta">{{ page.date | date: '%B %d, %Y' }}</p>
-  <article>
-  {{ content }}
-  </article>
+<div class = "row">
+  <div class="col-sm-10 blog-main">
+
+    <div class="blog-post">
+      <h2 class="blog-post-title">{{ page.title }}</h2>
+      <p class="blog-post-meta">{{ page.date | date: '%B %d, %Y' }}</p>
+      <article>
+        {{ content }}
+      </article>
+    </div>
+  </div>
 </div>
